@@ -22,6 +22,7 @@
         <content_attribute id="social-contacts">intense</content_attribute>
   </content_rating>
   <releases>
+        <release version="9.3.0" date="2022-01-29"/>
         <release version="9.3.0" date="2020-7-14">
             <description>
                <p>Added feature which allows you to like or follow from multiple accounts without the dialog closing (enabled by default)</p>

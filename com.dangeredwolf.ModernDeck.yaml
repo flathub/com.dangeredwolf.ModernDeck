@@ -1,8 +1,8 @@
 app-id: com.dangeredwolf.ModernDeck
 base: org.electronjs.Electron2.BaseApp
-base-version: "21.08"
+base-version: '21.08'
 runtime: org.freedesktop.Platform
-runtime-version: "21.08"
+runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node16
@@ -33,14 +33,15 @@ modules:
         ELECTRON_CACHE: /run/build/ModernDeck/flatpak-node/cache/electron
         TMPDIR: /run/build/ModernDeck/flatpak-node/tmp
         # Skip Electron related downloads
-        ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
+        ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
     build-commands:
       - touch .npmrc
       - echo "cache=flatpak-node/npm-cache" > .npmrc
-      - npm install 
+      - npm install
       - jq '.linux.target[0].target="dir"' <<<$(<electron-builder.json) > electron-builder.json
       - jq 'del(.linux.target[0].arch)' <<<$(<electron-builder.json) > electron-builder.json
-      - . flatpak-node/electron-builder-arch-args.sh; npm run --offline buildLinux -- $ELECTRON_BUILDER_ARCH_ARGS
+      - . flatpak-node/electron-builder-arch-args.sh; npm run --offline buildLinux
+        -- $ELECTRON_BUILDER_ARCH_ARGS
       # arch can sometimes be in the dir its best to have a wild card
       - cp -r dist/linux-*unpacked/* /app/bin/
       - install -Dm 755 start-moderndeck.sh /app/bin/start-moderndeck
@@ -48,9 +49,9 @@ modules:
       - install -Dm644 build/icons/16x16.png /app/share/icons/hicolor/16x16/apps/$FLATPAK_ID.png
       - install -Dm644 build/icons/24x24.png  /app/share/icons/hicolor/24x24/apps/$FLATPAK_ID.png
       - install -Dm644 build/icons/32x32.png  /app/share/icons/hicolor/32x32/apps/$FLATPAK_ID.png
-      - install -Dm644 build/icons/64x64.png  /app/share/icons/hicolor/64x64/apps/$FLATPAK_ID.png  
+      - install -Dm644 build/icons/64x64.png  /app/share/icons/hicolor/64x64/apps/$FLATPAK_ID.png
       - install -Dm644 build/icons/48x48.png  /app/share/icons/hicolor/48x48/apps/$FLATPAK_ID.png
-      - install -Dm644 build/icons/128x128.png  /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png     
+      - install -Dm644 build/icons/128x128.png  /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
       - install -Dm644 build/icons/150x150.png  /app/share/icons/hicolor/150x150/apps/$FLATPAK_ID.png
       - install -Dm644 build/icons/256x256.png  /app/share/icons/hicolor/256x256/apps/$FLATPAK_ID.png
       - install -Dm644 build/icons/512x512.png  /app/share/icons/hicolor/512x512/apps/$FLATPAK_ID.png
@@ -60,11 +61,12 @@ modules:
       - generated-sources.json
       - type: git
         url: https://github.com/dangeredwolf/ModernDeck.git
-        branch: "9.4"
+        branch: '9.4'
         commit: 50a2ea382ec4ef5c2b4e6fc8e5cc22a439ce57cd
         x-checker-data:
-            type: git
-            tag-pattern: ^v([\d.]+)$
+          type: git
+          tag-pattern: ^v([\d.]+)$
+        tag: v9.4.0
       - type: file
         path: com.dangeredwolf.ModernDeck.desktop
       - type: file

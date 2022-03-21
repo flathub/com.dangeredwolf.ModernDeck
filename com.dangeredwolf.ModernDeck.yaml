@@ -65,6 +65,8 @@ modules:
         x-checker-data:
             type: git
             tag-pattern: ^v([\d.]+)$
+      - type: patch
+        path: 0001-set-auto-update-download-to-flase-in-flatpak.patch
       - type: file
         path: com.dangeredwolf.ModernDeck.desktop
       - type: file

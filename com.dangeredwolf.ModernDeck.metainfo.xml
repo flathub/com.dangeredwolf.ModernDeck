@@ -22,7 +22,7 @@
         <content_attribute id="social-contacts">intense</content_attribute>
   </content_rating>
   <releases>
-        <release version="9.4-beta" date="2020-7-14">
+        <release version="9.4.0" date="2022-03-21">
             <description>
                 <ul>
                     <li>Added NFT Actions: A fine-tuned way to deal with accounts with NFT avatars</li>

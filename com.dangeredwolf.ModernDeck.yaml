@@ -60,8 +60,8 @@ modules:
       - generated-sources.json
       - type: git
         url: https://github.com/dangeredwolf/ModernDeck.git
-        tag: 'v9.3.0'
-        commit: 7a052c1dc4a7fcbfba49def2d9db342a95e5d843
+        branch: "9.4"
+        commit: 50a2ea382ec4ef5c2b4e6fc8e5cc22a439ce57cd
         x-checker-data:
             type: git
             tag-pattern: ^v([\d.]+)$
@@ -69,8 +69,6 @@ modules:
         path: com.dangeredwolf.ModernDeck.desktop
       - type: file
         path: com.dangeredwolf.ModernDeck.metainfo.xml
-      - type: patch
-        path: 0001-set-auto-update-and-auto-download-to-false-if-in-fla.patch
       - type: script
         dest-filename: start-moderndeck.sh
         commands:

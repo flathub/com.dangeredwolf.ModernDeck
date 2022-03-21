@@ -22,12 +22,21 @@
         <content_attribute id="social-contacts">intense</content_attribute>
   </content_rating>
   <releases>
-        <release version="9.3.0" date="2020-7-14">
+        <release version="9.4-beta" date="2020-7-14">
             <description>
-               <p>Added feature which allows you to like or follow from multiple accounts without the dialog closing (enabled by default)</p>
-               <p>Fixed bug where AMOLED theme does not persist upon reloading page</p>
-               <p>Fixed bug where accounts view could not be closed on simplified navigation mode due to a TweetDeck update</p>
-               <p>Updated i18n</p>
+                <ul>
+                    <li>Added NFT Actions: A fine-tuned way to deal with accounts with NFT avatars</li>
+                            <li>Multiple actions</li>
+                            <li>Multiple actions</li>
+                            <li>Hide in ModernDeck: Just hide users using NFT avatars. This is completely client-side: Your account doesn't perform any actions, and they'll be hidden in ModernDeck.</li>
+                            <li>Mute: Mute the account with the NFT avatar</li>
+                            <li>Block: Block the account with the NFT avatar</li>
+                            <li>Currently not available in Search columns due to Twitter API limitations (A workaround may be added in the future)</li>
+                            <li>Mutes and Blocks act upon your account, queueing NFT avatar users to be blocked or muted</li>
+                            <li>Queue is to avoid hitting API limits and anti-automation measures</li>
+                    <li>Implemented @pixeldesu's Advanced Mute Engine(Currently only used for NFT avatar hiding)</li>
+                    <li>Bugfixes and improvements</li>
+                </ul>
             </description>
         </release>
     </releases>

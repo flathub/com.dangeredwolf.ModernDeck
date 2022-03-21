@@ -61,12 +61,13 @@ modules:
       - generated-sources.json
       - type: git
         url: https://github.com/dangeredwolf/ModernDeck.git
-        branch: '9.4'
+        branch: "9.4"
         commit: 50a2ea382ec4ef5c2b4e6fc8e5cc22a439ce57cd
         x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
-        tag: v9.4.0
+            type: git
+            tag-pattern: ^v([\d.]+)$
+      - type: patch
+        path: 0001-set-auto-update-download-to-flase-in-flatpak.patch
       - type: file
         path: com.dangeredwolf.ModernDeck.desktop
       - type: file

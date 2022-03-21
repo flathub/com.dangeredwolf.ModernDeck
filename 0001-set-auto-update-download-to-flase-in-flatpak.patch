@@ -1,0 +1,29 @@
+From a49fab25b8a7e85f6ba6de9b1b167037a3f3ffbc Mon Sep 17 00:00:00 2001
+From: "Luna D. Dragon" <advaith.madhukar@gmail.com>
+Date: Mon, 21 Mar 2022 18:21:47 +0530
+Subject: [PATCH] set auto-update+download to flase in flatpak
+
+---
+ main.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/main.js b/main.js
+index 968bf65..8226856 100644
+--- a/main.js
++++ b/main.js
+@@ -97,6 +97,12 @@ console.log(deviceConfig);
+ autoUpdater.logger = log;
+ autoUpdater.logger.transports.file.level = "info";
+ 
++
++if (isFlatpak) {
++	autoUpdater.autoInstallOnAppQuit = false;
++	autoUpdater.autoDownload = false;
++}
++
+ switch(deviceConfig.autoUpdatePolicy) {
+ 	case "disabled":
+ 	case "manual":
+-- 
+2.35.1
+

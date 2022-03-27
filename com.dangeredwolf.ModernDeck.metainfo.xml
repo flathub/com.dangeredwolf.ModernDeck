@@ -1,33 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.dangeredwolf.ModernDeck</id>
-  <name>ModernDeck</name>
-  <summary>A more powerful Twitter experience</summary>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>MIT</project_license>
-  <description>
-    <p>
-     ModernDeck is an app/extension running atop TweetDeck that brings a new, Material Design-inspired interface, as well as new customization features.
-    </p>
-  </description>
-  <url type="homepage">https://moderndeck.org/</url>
-  <launchable type="desktop-id">com.dangeredwolf.ModernDeck.desktop</launchable>
-  <screenshots>
-        <screenshot type="default">
-          <image>https://github.com/dangeredwolf/ModernDeck/raw/8.0/build/en_screenshot.png</image>
-        </screenshot>
-  </screenshots>
-  <content_rating type="oars-1.1">
-        <content_attribute id="social-chat">intense</content_attribute>
-        <content_attribute id="social-contacts">intense</content_attribute>
-  </content_rating>
-  <releases>
-        <release version="9.4.1" date="2022-03-24"> 
-            <description>
-                <ul>
-                    <li>Fixed dark window title bar when using Light themes</li>
-                </ul>
-            </description>
-        </release>
-    </releases>
+	<id>
+		com.dangeredwolf.ModernDeck
+	</id>
+	<name>
+		ModernDeck
+	</name>
+	<summary>
+		A more powerful Twitter experience
+	</summary>
+	<metadata_license>
+		CC0-1.0
+	</metadata_license>
+	<project_license>
+		MIT
+	</project_license>
+	<description>
+		<p>
+			ModernDeck is an app/extension running atop TweetDeck that brings a new, Material Design-inspired interface, as well as new customization features.
+		</p>
+	</description>
+	<url type="homepage">
+		https://moderndeck.org/
+	</url>
+	<launchable type="desktop-id">
+		com.dangeredwolf.ModernDeck.desktop
+	</launchable>
+	<screenshots>
+		<screenshot type="default">
+			<image>
+				https://github.com/dangeredwolf/ModernDeck/raw/8.0/build/en_screenshot.png
+			</image>
+		</screenshot>
+	</screenshots>
+	<content_rating type="oars-1.1">
+		<content_attribute id="social-chat">
+			intense
+		</content_attribute>
+		<content_attribute id="social-contacts">
+			intense
+		</content_attribute>
+	</content_rating>
+	<releases>
+		<release version="v9.5.0-1544" date="2022-03-27">
+			<description>
+				<ul>
+					<li>
+						Moved build system from Rollup to Webpack (This definitely needs testing!)
+					</li>
+					<li>
+						Darker is the new dark theme, old dark theme is Material Dark
+					</li>
+					<li>
+						Updated i18n, added Hungarian
+					</li>
+					<li>
+						Changing to a theme color and changing back to default now works properly
+					</li>
+					<li>
+						Welcome screen is now a standard modal, not a part of the login system
+					</li>
+				</ul>
+			</description>
+		</release>
+	</releases>
 </component>

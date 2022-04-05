@@ -42,25 +42,16 @@
 		</content_attribute>
 	</content_rating>
 	<releases>
-		<release version="v9.5.0-1544" date="2022-03-27">
+		<release version="v9.5.0-1553" date="2022-04-22">
 			<description>
 				<ul>
-					<li>
-						Moved build system from Rollup to Webpack (This definitely needs testing!)
-					</li>
-					<li>
-						Darker is the new dark theme, old dark theme is Material Dark
-					</li>
-					<li>
-						Updated i18n, added Hungarian
-					</li>
-					<li>
-						Changing to a theme color and changing back to default now works properly
-					</li>
-					<li>
-						Welcome screen is now a standard modal, not a part of the login system
-					</li>
-				</ul>
+				    <li>Revamped color themes for light theme users</li>
+                    <li>Added Discord Dark theme (work-in-progress)</li>
+                    <li>Added Traditional Chinese language</li>
+                    <li>Fixed color themes being weird if TweetDeck and ModernDeck had conflicting theme values</li>
+                    <li>Upgraded to Electron 18</li>
+                    <li>Bugfixes and minor changes</li>
+                </ul>
 			</description>
 		</release>
 	</releases>

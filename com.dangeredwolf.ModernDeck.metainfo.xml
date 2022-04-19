@@ -22,12 +22,10 @@
         <content_attribute id="social-contacts">intense</content_attribute>
   </content_rating>
   <releases>
-        <release version="9.4.4" date="2022-04-18"/>
-        <release version="9.4.3" date="2022-04-11"/>
-        <release version="9.4.1" date="2022-03-24"> 
+        <release version="9.4.4" date="2022-04-19">
             <description>
                 <ul>
-                    <li>Fixed dark window title bar when using Light themes</li>
+                    <li>Updated Electron to hopefully fix weird resize behavior</li>
                 </ul>
             </description>
         </release>

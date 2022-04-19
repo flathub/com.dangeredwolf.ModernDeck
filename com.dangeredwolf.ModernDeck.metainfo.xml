@@ -42,15 +42,16 @@
 		</content_attribute>
 	</content_rating>
 	<releases>
-		<release version="v9.5.0-1553" date="2022-03-05">
+		<release version="v10.0.0-beta1869" date="2022-04-19">
 			<description>
 				<ul>
-				    <li>Revamped color themes for light theme users</li>
-                    <li>Added Discord Dark theme (work-in-progress)</li>
+				    <li>Large-scale technical differences</li>
+                    <li>Added Discord and Twitter Dark themes</li>
+                    <li>New default notification sound by @DreamersThistle</li>
+                    <li>Redesigned language picker UI</li>
                     <li>Added Traditional Chinese language</li>
-                    <li>Fixed color themes being weird if TweetDeck and ModernDeck had conflicting theme values</li>
-                    <li>Upgraded to Electron 18</li>
-                    <li>Bugfixes and minor changes</li>
+                    <li>Other UI tweaks, including corners and animations</li>
+                    <li>Bugfixes and other improvements</li>
                 </ul>
 			</description>
 		</release>

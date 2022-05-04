@@ -42,16 +42,15 @@
 		</content_attribute>
 	</content_rating>
 	<releases>
-		<release version="v10.0.0-beta1869" date="2022-04-19">
+		<release version="v10.0.0-beta-1984" date="2022-05-04">
 			<description>
-				<ul>
-				    <li>Large-scale technical differences</li>
-                    <li>Added Discord and Twitter Dark themes</li>
-                    <li>New default notification sound by @DreamersThistle</li>
-                    <li>Redesigned language picker UI</li>
-                    <li>Added Traditional Chinese language</li>
-                    <li>Other UI tweaks, including corners and animations</li>
-                    <li>Bugfixes and other improvements</li>
+                <p>This build contains a number of improvements</p>
+                <ul>
+                    <li>Implemented Advanced Mute Engine fully now</li>
+                    <li>Added new Welcome system</li>
+                    <li>Fixed pretty much all the issues remaining with ModernDeck Boot launcher (NFT actions, missing I18n stuff)</li>
+                    <li>Fixed Twitter Dark theme not intiializing correctly upon reload</li>
+                    <li>Other bugfixes and improvements</li>
                 </ul>
 			</description>
 		</release>

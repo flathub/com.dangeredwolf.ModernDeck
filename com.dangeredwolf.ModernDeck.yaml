@@ -61,8 +61,8 @@ modules:
       - generated-sources.json
       - type: git
         url: https://github.com/dangeredwolf/ModernDeck.git
-        tag: "v10.0.0-beta1869"
-        commit: de13691ad30dd5cfd91e7bee7395642bfc034589      
+        tag: v10.0.0-beta-1984
+        commit: 6518970cf61bdef47334e47bf98706ac9ce19189    
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$

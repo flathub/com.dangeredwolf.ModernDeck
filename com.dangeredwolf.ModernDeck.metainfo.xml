@@ -51,6 +51,7 @@
                     <li>Fixed pretty much all the issues remaining with ModernDeck Boot launcher (NFT actions, missing I18n stuff)</li>
                     <li>Fixed Twitter Dark theme not intiializing correctly upon reload</li>
                     <li>Other bugfixes and improvements</li>
+                    <li>Actually usable again</li>
                 </ul>
 			</description>
 		</release>

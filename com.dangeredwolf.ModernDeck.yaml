@@ -14,9 +14,9 @@ finish-args:
   - --socket=pulseaudio
   - --share=network
   - --device=dri
-  - --filesystem=xdg-videos:ro
-  - --filesystem=xdg-pictures:ro
-  - --filesystem=xdg-download
+  - --env=ZYPAK_SPAWN_LATEST_ON_REEXEC=0
+  - --env=FLATPAK_HOST=1 
+  - --env=GTK_USE_PORTAL=1 
 modules:
   - name: ModernDeck
     buildsystem: simple
@@ -38,6 +38,7 @@ modules:
       - touch .npmrc
       - echo "cache=flatpak-node/npm-cache" > .npmrc
       - npm install
+      - npm --offline run webpack 
       - jq '.linux.target[0].target="dir"' <<<$(<electron-builder.json) > electron-builder.json
       - jq 'del(.linux.target[0].arch)' <<<$(<electron-builder.json) > electron-builder.json
       - . flatpak-node/electron-builder-arch-args.sh; npm run --offline buildLinux
@@ -73,5 +74,5 @@ modules:
       - type: script
         dest-filename: start-moderndeck.sh
         commands:
-          - export TMPDIR=$XDG_RUNTIME_DIR/app/$FLATPAK_ID
-          - FLATPAK_HOST=1 zypak-wrapper.sh /app/bin/moderndeck "$@"
+          - export TMPDIR=$XDG_RUNTIME_DIR/app/$FLATPAK_ID 
+          - zypak-wrapper.sh /app/bin/moderndeck "$@"

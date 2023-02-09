@@ -15,8 +15,8 @@ finish-args:
   - --share=network
   - --device=dri
   - --env=ZYPAK_SPAWN_LATEST_ON_REEXEC=0
-  - --env=FLATPAK_HOST=1 
-  - --env=GTK_USE_PORTAL=1 
+  - --env=FLATPAK_HOST=1
+  - --env=GTK_USE_PORTAL=1
 modules:
   - name: ModernDeck
     buildsystem: simple
@@ -61,8 +61,8 @@ modules:
       - generated-sources.json
       - type: git
         url: https://github.com/dangeredwolf/ModernDeck.git
-        tag: v9.4.5
-        commit: 83f926edcab8868f63f59221cf0bd0ac3e8122c0
+        tag: v10.0.0
+        commit: f6534b5e3161e0fbbda62ebeaa92cc2191d7cf4c
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
